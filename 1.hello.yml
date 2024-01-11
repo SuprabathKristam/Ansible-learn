@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Say Hello
-      debug:
+      ansible.builtin.debug:   #We can just give debug also it will work
         msg: Hello !
 
 - name: Just Saying Good Bye
