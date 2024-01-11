@@ -1,0 +1,13 @@
+- name: Just Saying Hello
+  hosts: all
+  tasks:
+    - name: Say Hello
+      debug:
+        msg: Hello !
+
+- name: Just Saying Good Bye
+  hosts: all
+  tasks:
+    - name: Say good Bye
+      debug:
+        msg: good Bye!!
