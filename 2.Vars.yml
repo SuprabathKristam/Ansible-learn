@@ -7,6 +7,11 @@
     - name: PrintPlay level variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+    - name: Print Variables declared inside a task
+      vars:
+        URL: task.google.com
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
 
   roles:
     - demo
