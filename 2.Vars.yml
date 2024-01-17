@@ -1,0 +1,10 @@
+- name: Demo nv Vars
+  hosts: localhost
+  #If we declare variables here(play level) all the tasks can access them
+  tasks:
+    - name: PrintPlay level variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+
+  roles:
+    - demo
