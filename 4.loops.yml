@@ -16,3 +16,12 @@
         - {name: "Suprabath" , age: 30} #Json inputs
         - {name: "saketha", age: 29}
         - {name: "Mahanya", age: 2}
+
+    - name: Loop Demo on Maps
+      ansible.builtin.debug:
+        msg: Hello, {{ item.name  }}, your age is {{ item.age }}
+      loop:
+        - { name: "Ram" , age: 30 , run: true } #Json inputs
+        - { name: "Sita", age: 29 , run: true }  #We can restrict the loop by using this run
+        - { name: "laxman", age: 21, run: false }
+      when: item.run  #here it is a boolean using this we are restricting the loop
