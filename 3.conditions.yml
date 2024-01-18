@@ -1,0 +1,10 @@
+- name: Demo On Conditions
+  hosts: localhost
+  tasks:
+    - name: Say hello to Suprabath
+      ansible.builtin.debug:
+        msg: Hello Suprabath
+
+    - name: Say Hi to Saketha
+      ansible.builtin.debug:
+        msg: Hello Suprabath
