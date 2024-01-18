@@ -8,3 +8,11 @@
         - Suprabath
         - saketha
         - Mahanya
+
+    - name: Loop Demo on Maps
+      ansible.builtin.debug:
+        msg: Hello, {{ item.name  }}, your age is {{ item.age }}
+      loop:
+        - {name: "Suprabath" , age: 30} #Json inputs
+        - {name: "saketha", age: 29}
+        - {name: "Mahanya", age: 2}
