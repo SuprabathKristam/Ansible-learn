@@ -4,7 +4,9 @@
     - name: Say hello to Suprabath
       ansible.builtin.debug:
         msg: Hello Suprabath
+      when: user == "Suprabath" #Here user is a variable we are passing through cli
 
     - name: Say Hi to Saketha
       ansible.builtin.debug:
-        msg: Hello Suprabath
+        msg: Hello Saketha
+      when: user == "Saketha"
