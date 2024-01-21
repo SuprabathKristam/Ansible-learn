@@ -1,0 +1,7 @@
+- name: Demo on Template
+  hosts: localhost
+  tasks:
+    - name: Copy a file
+      copy:
+        src: sample.txt
+        dest: /tmp/sample.txt
