@@ -2,7 +2,8 @@
   hosts: localhost
   tasks:
     - name: Run shell command
-      ansible.builtin.shell: exit1
+      ansible.builtin.shell: exit1  #exit 1 is non success status
+      ignore_errors: yes # with this even if there is a error int his task it will proceed to next task
 
     - name: Say Hello
       ansible.builtin.shell:
