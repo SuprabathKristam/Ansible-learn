@@ -1,0 +1,7 @@
+- name: Demo on handlers
+  hosts: localhost
+  tasks:
+    - name: Copy a sample file
+      ansible.debug.template:
+        src: sample.txt
+        dest: /tmp/sammple.txt
