@@ -5,9 +5,10 @@
       ansible.builtin.template:
         src: sample.txt
         dest: /tmp/sammple.txt
+      notify: Say Hello again    # We are linking handler with this task so if there is any change in this task then handler will get executes
 
 
-  handlers:
+  handlers:                 #handlers task will execute when there is change in previous task
     - name: Say Hello again
       ansible.builtin.debug:
         msg: hello {{ name }}
