@@ -1,0 +1,3 @@
+- name: printing
+  ansible.builtin.debug:
+    msg: Hello from centos
