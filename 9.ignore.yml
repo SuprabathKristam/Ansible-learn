@@ -1,0 +1,9 @@
+- name: Demo on ignore
+  hosts: localhost
+  tasks:
+    - name: Run shell command
+      ansible.builtin.shell: exit1
+
+    - name: Say Hello
+      ansible.builtin.shell:
+        msg: hi
