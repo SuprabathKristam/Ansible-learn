@@ -1,0 +1,10 @@
+- name: Demo on Register
+  hosts: localhost
+  tasks:
+    - name: shell
+      ansible.builtin.shell: uptime
+      register: out              # Storing the variable in to a variable called out
+
+    - name: print shell output
+      ansible.builtin.debug:
+        msg: "{{ out }}"
