@@ -3,4 +3,4 @@
   tasks:
     - name: Printing facts
       ansible.builtin.debug:
-        msg: "{{ansible_architecture}} # Here this will fetch the information about the server and it is a ansible variable which come under facts
+        msg: "{{ansible_architecture}}" # Here this will fetch the information about the server and it is a ansible variable which come under facts
