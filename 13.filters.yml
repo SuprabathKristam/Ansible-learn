@@ -1,8 +1,13 @@
 - name: filter demo
   hosts: localhost
+  vars:
+    URL: https://nginx.org/download/nginx-1.25.3.zip
   tasks:
     - name: filter
       ansible.builtin.unarchive:
-        src: "https://nginx.org/download/nginx-1.25.3.zip"
+        src: "{{ URL }}"
         dest: /tmp
         remote_src: yes
+    - name: filter
+      ansible.builtin.debug:
+        msg: "{{ URL | split('/') | last | regex_replace('.zip') }}"   #here we are splitting the url on the basis of forward slash and taking the last split and in that last split we replacing .zip with nothing so that we will get just the ngnix-1.25.3
